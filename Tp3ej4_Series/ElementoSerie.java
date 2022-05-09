@@ -1,4 +1,4 @@
-package ejercicioSeries;
+package Tp3ej4_Series;
 
 public abstract class ElementoSerie {
 

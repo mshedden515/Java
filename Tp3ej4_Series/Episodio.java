@@ -1,4 +1,4 @@
-package ejercicioSeries;
+package Tp3ej4_Series;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

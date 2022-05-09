@@ -1,4 +1,4 @@
-package ejercicioSeries;
+package Tp3ej4_Series;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -63,23 +63,20 @@ public class Serie extends ElementoSerie {
     @Override
     public int totalVistos() {
         int total=0;
-        for(int i=0;i>= temporada.size();i++){
+        for(int i=0;i<temporada.size();i++){
             total+=temporada.get(i).totalVistos();
-
         }
         return total;
     }
 
     @Override
     public int promedioCalificaciones() {
-
         int promedio=0;
         int total=0;
-        for(int i=0;i>=temporada.size();i++){
+        for(int i=0;i<temporada.size();i++){
             total+=temporada.get(i).promedioCalificaciones();
         }
-
-        promedio=total/temporada.size();
+        promedio=(total/temporada.size());
         return promedio;
     }
 

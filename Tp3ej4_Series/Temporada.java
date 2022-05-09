@@ -1,4 +1,4 @@
-package ejercicioSeries;
+package Tp3ej4_Series;
 
 import java.util.ArrayList;
 
@@ -27,10 +27,10 @@ public class Temporada extends ElementoSerie {
     @Override
     public int totalVistos(){
         int total=0;
-
-        for(int i=0;i>=episodios.size();i++){
-            episodios.get(i).isVisto();
-            total++;
+        
+        for(int i=0;i<episodios.size();i++){
+        	if (episodios.get(i).isVisto()) 
+        		total++;
         }
         return total;
     }
@@ -43,7 +43,7 @@ public class Temporada extends ElementoSerie {
         for(Episodio e:episodios){
            total += e.getCalificacion();
         }
-        promedio=total/(episodios.size());
+        promedio=(total/(episodios.size()));
         return promedio;
     }
 

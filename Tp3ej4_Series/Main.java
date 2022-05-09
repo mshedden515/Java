@@ -1,4 +1,4 @@
-package ejercicioSeries;
+package Tp3ej4_Series;
 
 public class Main {
 
@@ -7,7 +7,7 @@ public class Main {
         Temporada temp1 = new Temporada();
         Episodio cepi1 = new Episodio("HOY","Buena",true, 5);
         Episodio cepi2 = new Episodio ("Mañana","Mala",true,2);
-        Episodio cepi3 = new Episodio ("Mañana parte 2","Mediana",true,3);
+        Episodio cepi3 = new Episodio ("Mañana parte 2","Mediana",false,3);
         Episodio cepi4 = new Episodio ("El dia","",false,-1);
 
         temp1.addEpisodio(cepi1);
@@ -46,7 +46,7 @@ public class Main {
         japonesa.addTemporada(j1temp1);
 
 
-        System.out.println(temp2);
+        System.out.println(temp1.totalVistos());
 
 
 
