@@ -48,6 +48,7 @@ public class Sensor {
 		return NombreZona;
 	}
 
+	//MALLLL
 	public boolean ChequearSensor() {
 		if (vidrio || ventana || puerta || movimiento)
 			return true;
