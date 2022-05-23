@@ -1,4 +1,4 @@
-package Geometria;
+package Tp3ej3_Geometria;
 import java.util.Scanner;
 
 public class Principal {

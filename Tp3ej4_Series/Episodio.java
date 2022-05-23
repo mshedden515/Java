@@ -1,10 +1,5 @@
 package Tp3ej4_Series;
 
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
 public class Episodio {
 
     private String titulo;

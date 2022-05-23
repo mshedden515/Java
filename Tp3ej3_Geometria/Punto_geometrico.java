@@ -1,4 +1,4 @@
-package Geometria;
+package Tp3ej3_Geometria;
 
 public class Punto_geometrico {
 	private int X = 0;

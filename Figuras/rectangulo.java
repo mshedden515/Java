@@ -1,22 +1,29 @@
 package Figuras;
 
-public class rectangulo {
+public class rectangulo extends figura{
+	
+	private double lado1; 
+	private double lado2;
+	
+	public rectangulo(double l1, double l2) {
+		super("rectangulo");
+		this.lado1 = l1;
+		this.lado2 = l2;
+	}
 
-	//Atributos de la clase
-	private String nombre;
-	private int lado1, lado2;
-
-	//Constructor (parametros) Uso "This" cuando hago referencia al parametro
-	public Rectangulo(String nombre, int lado, int lado2) {
-		this.nombre = nombre
+	
+	/*
+	Constructor (parametros) Uso "This" cuando hago referencia al parametro
+	public void Rectangulo(String nombre, int lado1, int lado2) {
+		this.nombre = nombre;
 		this.lado1 = lado1;
 		this.lado2 = lado2;
-	}
+	}*/
 	
-	//De esta forma reuso el contructor anterior
-	public Rectangulo(String nombre) {
-		this(nombre, 10, 10);
-	}
+	/*/De esta forma reuso el contructor anterior
+	public void Rectangulo1010(String nombre) {
+		this.Rectangulo(nombre, 10, 10);
+	}*/
 
 	public String getNombre() {
 		return this.nombre;
@@ -26,7 +33,7 @@ public class rectangulo {
 		this.nombre = nombre;
 	}
 
-	public int getLado1() {
+	public double getLado1() {
 		return lado1;
 	}
 
@@ -34,7 +41,7 @@ public class rectangulo {
 		this.lado1 = lado1;
 	}
 
-	public int getLado2() {
+	public double getLado2() {
 		return lado2;
 	}
 
@@ -50,8 +57,7 @@ public class rectangulo {
 		return this.lado1 * this.lado2;
 	}
 	
-	public getDatosCompletos() {
-		
-	}
+	
+	
 }
 

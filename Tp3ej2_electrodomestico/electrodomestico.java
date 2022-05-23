@@ -1,4 +1,4 @@
-package Tp3_electrodomestico;
+package Tp3ej2_electrodomestico;
 
 public class electrodomestico {
 	

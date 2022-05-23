@@ -10,7 +10,7 @@ public class ControlAlarma2 {
 		Scanner entrada = new Scanner(System.in);
 		Sensor S1 = new Sensor("Comedor");
 		Sensor S2 = new Sensor("Banio");
-		S2.setVentana(true);
+		S1.setVentana(true);
 		
 		Alarma A = new Alarma();
 		A.addSensor(S1);

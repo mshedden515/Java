@@ -1,12 +1,12 @@
 package Figuras;
 
-public class Circulo {
-
-	private String nombre;
+public class Circulo extends figura{
+	
 	private double radio;
 	
-	public Circulo(String nombre, double radio) {
-		this.nombre = nombre;
+	public Circulo(double r) {
+		super("circulo");
+		this.radio = r;
 	}
 
 	public String getNombre() {
@@ -30,8 +30,10 @@ public class Circulo {
 	}
 	
 	public double getArea() {
-		return Math.PI * Math.pow(this.radio);
+		return Math.PI * radio * radio;
 	}
 	
-	
+	public String toString() {
+		return ("Nombre: " + getNombre() + "- Area: " + getArea());
+	}
 }

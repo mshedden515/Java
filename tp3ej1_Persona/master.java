@@ -1,8 +1,8 @@
-package tp3_persona;
+package tp3ej1_Persona;
 
 import java.time.LocalDate;
 
-public class main {
+public class master {
 
 	public static void main(String[] args) {
 		

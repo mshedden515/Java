@@ -1,4 +1,4 @@
-package tp3_persona;
+package tp3ej1_Persona;
 
 import java.time.LocalDate;
 import java.time.Period;
