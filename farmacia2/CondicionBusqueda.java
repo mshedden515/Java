@@ -1,4 +1,4 @@
-package adicional.farmacia2;
+package farmacia2;
 
 public abstract class CondicionBusqueda {
 	
