@@ -12,6 +12,9 @@ public class persona {
 	private String apellido = "N";
 	private double peso = 1;
 	private double altura = 1;
+	private final int mayor_de_edad = 18;
+	private final int edad_para_votar = 16;
+	
 	
 	//Constructors 
 	public persona(int DNI) {
@@ -89,32 +92,55 @@ public class persona {
 		if ((Hoy.getYear() > FechaNac.getYear()) 
 			&& (Hoy.getMonth() == FechaNac.getMonth()) 
 			&& ((Hoy.getDayOfMonth() == FechaNac.getDayOfMonth())))
-			return "Hoy es tu cumpleaños";
+			return "Hoy es su cumpleaños";
 		else
-			return "Hoy no es tu cumpleaños";
+			return "Hoy no es su cumpleaños";
+	}
+	
+	
+	//Controlamos que sea coherente, que haya nacido y que no tenga mas de 110 años
+	public Boolean esCoherente (LocalDate Fechanac) {
+		LocalDate Hoy = LocalDate.now();
+		Period periodo = Period.between(Fechanac, Hoy);
+		if ((Fechanac.getYear() > Hoy.getYear()) || (periodo.getYears() > 110))
+			return false;
+		else
+			return true;
 	}
 	
 	//Limit N to compare to period.getYears
 	public Boolean YearPlusN(LocalDate FechaNac, int N) {
 		LocalDate Hoy = LocalDate.now();
 		Period periodo = Period.between(FechaNac, Hoy);
-		if (periodo.getYears() > N)
+		if (this.esCoherente(FechaNac)) {
+			if (periodo.getYears() > N)
+				return true;
+		}
+		return false;
+	}
+	
+	//Controla que mayor sea mas grande que una cantidad de años dada
+	public Boolean Esmayor (LocalDate FechaNac, int mayor) {
+		if (YearPlusN(FechaNac, mayor))
 			return true;
 		else
 			return false;
 	}
 	
-	public String IsAdult (LocalDate FechaNac) {
-		if (YearPlusN(FechaNac, 18))
-			return ("Es mayor de 18 años");
+	public String esAdulto (LocalDate FechaNac) {
+		if (YearPlusN(FechaNac, mayor_de_edad))
+			return ("Es mayor de " + mayor_de_edad);
 		else
-			return ("Es menor de 18 años");
+			return ("Es menor de " + mayor_de_edad);
+	}
+	public String CanIvote(LocalDate FechaNac) {
+		if (Esmayor(FechaNac, edad_para_votar))
+			return ("Es mayor de " + edad_para_votar + " puede votar");
+		else
+			return ("Es menor de " + edad_para_votar + " no puede votar");
 	}
 	
-	public String CanIvote(LocalDate FechaNac) {
-		if (YearPlusN(FechaNac, 16))
-			return ("Es mayor de 16, puede votar");
-		else
-			return ("Es menor de 16, no puede votar");
+	public String DatosPersona(int DNI) {
+		return ("La persona cuyo DNI es: " + getDNI() + " pertenece a: " + getNombre() + " " + getApellido());
 	}
 }

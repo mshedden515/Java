@@ -13,6 +13,7 @@ public class Punto_geometrico {
 		return (Y + Y1);
 	}
 	
+	//distancia euclidea
 	public double DistanciaXY(int X1, int Y1) {
 		return (Math.sqrt(Math.pow(X-X1,2) + (Math.pow(Y-Y1,2)))); 
 	}

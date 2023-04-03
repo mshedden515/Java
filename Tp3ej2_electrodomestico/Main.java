@@ -5,8 +5,8 @@ package Tp3ej2_electrodomestico;
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		electrodomestico e = new electrodomestico();
+		
+		electrodomestico e = new electrodomestico("heladera", 300.50, "blanca", 50, 100);
 		
 		if (e.bajoconsumo())
 			System.out.println("El electrodomestico es bajo consumo");
@@ -17,5 +17,6 @@ public class Main {
 			System.out.println("El electrodomestico es alta gama. Balance: " + e.getBalance());
 		else
 			System.out.println("El electrodomestico No es alta gama. Balance: " + e.getBalance());
+		System.out.println("El electrodomestico será considerado de Alta Gama si su balance es mayor a 3");
 		}		
 }

@@ -39,6 +39,15 @@ public class electrodomestico {
 	public void setPeso(int peso) {
 		this.peso = peso;
 	}
+	//Constructores
+	public electrodomestico (String nombre, double precioBase, String color, int consumo, int Peso) {
+		setNombre(nombre);
+		setPrecio_base(precioBase);
+		setColor(color);
+		setConsumo_energetico(consumo);
+		setPeso(Peso);
+	}
+	//Fin constructores
 	
 	public boolean bajoconsumo() {
 		return ConsumoEnergetico < ConsumoMaximo;
