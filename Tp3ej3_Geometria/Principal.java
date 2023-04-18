@@ -1,28 +1,22 @@
 package Tp3ej3_Geometria;
-import java.util.Scanner;
+
 
 public class Principal {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-		Scanner lectura = new Scanner (System.in);
-		Punto_geometrico P = new Punto_geometrico();
-		Punto_geometrico P1 = new Punto_geometrico(3,1);
+				
+		Punto_geometrico P = new Punto_geometrico(1,3);
+		Punto_geometrico P1 = new Punto_geometrico(2,4);
+		rectangulo R = new rectangulo(P, 10, 10);
+		rectangulo R1 = new rectangulo(P1, 10, 11);
 		
-		System.out.println("Ingrese punto X: ");
-		int X = lectura.nextInt();
-		P.setX(X);
-		System.out.println("Ingrese punto Y: ");
-		int Y = lectura.nextInt();
-		P.setY(Y);
-		
-		System.out.println("El punto X es: " + P.getX() + " y el punto Y es: " + P.getY());
-		System.out.println("La distancia a punto P1 es: " + P1.DistanciaXY(X,Y));
-		
-		
-
-		
+		R.mostrarRect();
+		R.desplazar_rect(P1);
+		R.mostrarRect();
+		System.out.println("El area del rectangulo R es: " + R.getArea());
+		System.out.println("El area del rectangulo R1 es: " + R1.getArea());
+		System.out.println("El rectangulo R es: " + R.compararRectangulo(R, R1));
+		System.out.println("El rectangulo R es cuadrado? " + R.EsCuadrado());
+		System.out.println("El rectangulo R1 es cuadrado? " + R1.EsCuadrado());
 	}
-
 }

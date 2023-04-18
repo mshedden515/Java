@@ -6,15 +6,15 @@ public class Punto_geometrico {
 	
 	
 	public int DesplazarX(int X1) {
-		return (X + X1);
+		return (X = X + X1);
 	}
 	
 	public int DesplazarY(int Y1) {
-		return (Y + Y1);
+		return (Y = Y + Y1);
 	}
 	
 	//distancia euclidea
-	public double DistanciaXY(int X1, int Y1) {
+	public double DistanciaXY(int X, int Y, int X1, int Y1) {
 		return (Math.sqrt(Math.pow(X-X1,2) + (Math.pow(Y-Y1,2)))); 
 	}
 
@@ -37,10 +37,6 @@ public class Punto_geometrico {
 	public Punto_geometrico(int X, int Y) {
 		this.X = X;
 		this.Y = Y;
-	}
-
-	public Punto_geometrico() {
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
